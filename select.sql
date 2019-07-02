@@ -13,9 +13,6 @@ SELECT s.id, s.NAME, AVG(sc.score) from student as s LEFT JOIN student_course as
 GROUP BY sc.studentId HAVING AVG(sc.score)>=60;
 
 
--- (
--- select studentId,avg(score) as avg from student_course  GROUP BY studentId HAVING AVG(score)>=60);
-
 
 # 4.查询在student_course表中不存在成绩的学生信息的SQL语句
 SELECT DISTINCT id,NAME,age,sex from student where id not in (
